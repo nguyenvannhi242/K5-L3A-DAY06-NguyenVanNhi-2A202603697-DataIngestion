@@ -45,3 +45,19 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+---
+
+## Chạy tái lập bài làm (Nguyễn Văn Nhi — `2A202603697`)
+
+- **Corpus:** `starter/data/NIST.AI.100-1.pdf` (42 trang nội dung hợp lệ, chi tiết tại [data/manifest.json](data/manifest.json)).
+- **Embedding & Vector Store:** `BAAI/bge-small-en-v1.5` (384 chiều, local) + `qdrant-client` (local persistent tại `starter/results/qdrant_db/`, cosine).
+- **Lệnh chạy:**
+  ```bash
+  cd starter
+  Copy-Item .env.example .env
+  python -m pip install -r requirements.txt
+  python -m pip install sentence-transformers qdrant-client
+  python -m src.run
+  ```
+- **Kết quả & Báo cáo:** Xem [results/summary.json](results/summary.json), [results/traces.json](results/traces.json), [artifacts/experiment_log.csv](artifacts/experiment_log.csv) và [report/individual/2A202603697_NguyenVanNhi.md](report/individual/2A202603697_NguyenVanNhi.md).
