@@ -1,5 +1,7 @@
-"""Choose a real embedding provider (API or local) and implement this contract."""
+"""Real local embedding adapter using SentenceTransformers (no mock fallback)."""
 from typing import Protocol
+
+from sentence_transformers import SentenceTransformer
 
 
 class Embedder(Protocol):
@@ -16,14 +18,37 @@ class Embedder(Protocol):
 
 
 class MyEmbedder:
-    """TODO: implement a provider adapter; do not silently fall back to mock vectors."""
+    """SentenceTransformer embedding adapter; raises on failure without mock fallback."""
 
-    def __init__(self, model_name: str) -> None:
+    def __init__(self, model_name: str = "BAAI/bge-small-en-v1.5") -> None:
         self.model_name = model_name
-        raise NotImplementedError("TODO: initialize real embedder and dimensions")
+        self._model = SentenceTransformer(model_name)
+        dim = self._model.get_sentence_embedding_dimension()
+        if dim is None:
+            raise RuntimeError(f"Could not determine embedding dimensions for {model_name}")
+        self.dimensions = int(dim)
+        self._query_prefix = (
+            "Represent this sentence for searching relevant passages: "
+            if "bge-" in model_name.lower()
+            else ""
+        )
 
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        raise NotImplementedError("TODO: embed_documents")
+        if not texts:
+            return []
+        vectors = self._model.encode(
+            texts,
+            batch_size=32,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        return [vec.tolist() for vec in vectors]
 
     def embed_query(self, question: str) -> list[float]:
-        raise NotImplementedError("TODO: embed_query")
+        query_text = f"{self._query_prefix}{question}" if self._query_prefix else question
+        vec = self._model.encode(
+            query_text,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        return vec.tolist()
