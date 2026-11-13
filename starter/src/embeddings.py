@@ -23,7 +23,12 @@ class MyEmbedder:
     def __init__(self, model_name: str = "BAAI/bge-small-en-v1.5") -> None:
         self.model_name = model_name
         self._model = SentenceTransformer(model_name)
-        dim = self._model.get_sentence_embedding_dimension()
+        get_dim = getattr(
+            self._model,
+            "get_embedding_dimension",
+            self._model.get_sentence_embedding_dimension,
+        )
+        dim = get_dim()
         if dim is None:
             raise RuntimeError(f"Could not determine embedding dimensions for {model_name}")
         self.dimensions = int(dim)

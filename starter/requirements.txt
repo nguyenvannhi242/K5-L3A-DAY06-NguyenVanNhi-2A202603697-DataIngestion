@@ -1,4 +1,6 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup, PDF parsing, local SentenceTransformers embeddings, and Qdrant vector store.
 psycopg[binary]==3.3.8
-pypdf>=5,<7
+pypdf>=5,<8
 python-dotenv>=1,<2
+sentence-transformers>=3.0.0
+qdrant-client>=1.12.0

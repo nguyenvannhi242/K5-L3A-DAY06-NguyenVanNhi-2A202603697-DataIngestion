@@ -120,6 +120,7 @@
 
 ### Giới hạn và Hướng cải tiến
 - **Giới hạn:** Tập test chỉ có 5 câu (chỉ mang tính minh họa, không thể suy rộng tổng quát cho mọi corpus); tác giả tự chấm Coherence/Grounding nên có thể tồn tại thiên lệch; chunking vẫn thực hiện theo từng trang PDF nên câu vắt qua ranh giới hai trang (như `P07 → P08`) bị mất ngữ cảnh đầu câu.
+- **Công cụ hỗ trợ & Cách kiểm tra (theo `RULES.md`):** Sử dụng trợ lý AI (Antigravity) để hỗ trợ viết khung mã nguồn pipeline và định dạng bảng báo cáo. Toàn bộ dữ liệu, câu hỏi và kết quả được kiểm chứng thực tế bằng cách: (1) chạy script đối chiếu 20/20 `evidence_quote` khớp nguyên văn trên từng trang `gold_page` của file PDF gốc sau chuẩn hóa; (2) chạy trực tiếp `python -m src.run` với model thật `BAAI/bge-small-en-v1.5` và `QdrantVectorStore`; (3) kiểm tra thủ công từng bản ghi top-3 của tập `test` và 10 mẫu Coherence.
 - **Cải tiến nếu làm lại:**
   1. Nối text liên trang trước khi chia chunk (nhưng vẫn lưu danh sách `pages` trong metadata để truy vết), giúp khắc phục lỗi câu bị ngắt ở cuối trang PDF.
   2. Gộp các danh sách bullet ngắn với câu dẫn phía trước thay vì tách rời tại `q09`.
