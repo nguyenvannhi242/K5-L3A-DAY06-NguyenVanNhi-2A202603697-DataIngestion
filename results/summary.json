@@ -1,0 +1,146 @@
+{
+  "run_timestamp": "2026-11-13T05:13:49.218212+00:00",
+  "student": "Nguyễn Văn Nhi (2A202603697 - L3A)",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "embedding_dimensions": 384,
+  "vector_store": "qdrant-client 1.20.0 (local persistent, cosine, exact)",
+  "cost_usd": 0.0,
+  "valid_pages_count": 42,
+  "skipped_or_logged_pages": [
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 1,
+      "status": "excluded_front_or_back_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 2,
+      "status": "excluded_front_or_back_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 3,
+      "status": "excluded_front_or_back_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 4,
+      "status": "excluded_front_or_back_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 5,
+      "status": "excluded_front_or_back_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "page": 48,
+      "status": "excluded_front_or_back_matter"
+    }
+  ],
+  "idempotency_check_strategy_A": {
+    "before_reingest": 239,
+    "after_reingest": 239,
+    "no_duplicates": true
+  },
+  "ingest_metrics": {
+    "A": {
+      "chunk_count": 239,
+      "total_chars": 110827,
+      "min_len": 51,
+      "median_len": 500,
+      "max_len": 500,
+      "avg_len": 463.7,
+      "embed_seconds": 6.487,
+      "upsert_seconds": 0.78,
+      "total_ingest_seconds": 7.267,
+      "stored_count": 239
+    },
+    "B": {
+      "chunk_count": 170,
+      "total_chars": 100897,
+      "min_len": 151,
+      "median_len": 628,
+      "max_len": 799,
+      "avg_len": 593.5,
+      "embed_seconds": 4.921,
+      "upsert_seconds": 0.517,
+      "total_ingest_seconds": 5.439,
+      "stored_count": 170
+    },
+    "C": {
+      "chunk_count": 170,
+      "total_chars": 100897,
+      "min_len": 151,
+      "median_len": 628,
+      "max_len": 799,
+      "avg_len": 593.5,
+      "embed_seconds": 4.921,
+      "upsert_seconds": 0.565,
+      "total_ingest_seconds": 5.486,
+      "stored_count": 170
+    }
+  },
+  "retrieval_summary": [
+    {
+      "strategy": "A",
+      "split": "dev",
+      "total": 15,
+      "hit_at_1_count": 8,
+      "hit_at_1_rate": 0.5333,
+      "hit_at_3_count": 9,
+      "hit_at_3_rate": 0.6,
+      "filter_compliance": "N/A"
+    },
+    {
+      "strategy": "A",
+      "split": "test",
+      "total": 5,
+      "hit_at_1_count": 4,
+      "hit_at_1_rate": 0.8,
+      "hit_at_3_count": 4,
+      "hit_at_3_rate": 0.8,
+      "filter_compliance": "N/A"
+    },
+    {
+      "strategy": "B",
+      "split": "dev",
+      "total": 15,
+      "hit_at_1_count": 11,
+      "hit_at_1_rate": 0.7333,
+      "hit_at_3_count": 12,
+      "hit_at_3_rate": 0.8,
+      "filter_compliance": "N/A"
+    },
+    {
+      "strategy": "B",
+      "split": "test",
+      "total": 5,
+      "hit_at_1_count": 4,
+      "hit_at_1_rate": 0.8,
+      "hit_at_3_count": 5,
+      "hit_at_3_rate": 1.0,
+      "filter_compliance": "N/A"
+    },
+    {
+      "strategy": "C",
+      "split": "dev",
+      "total": 15,
+      "hit_at_1_count": 11,
+      "hit_at_1_rate": 0.7333,
+      "hit_at_3_count": 12,
+      "hit_at_3_rate": 0.8,
+      "filter_compliance": "3/3"
+    },
+    {
+      "strategy": "C",
+      "split": "test",
+      "total": 5,
+      "hit_at_1_count": 4,
+      "hit_at_1_rate": 0.8,
+      "hit_at_3_count": 5,
+      "hit_at_3_rate": 1.0,
+      "filter_compliance": "1/1"
+    }
+  ]
+}

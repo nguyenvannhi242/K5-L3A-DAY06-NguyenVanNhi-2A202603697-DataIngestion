@@ -1,0 +1,40 @@
+{
+  "auditor": "Nguyễn Văn Nhi (author; self-audit risk of bias noted)",
+  "coherence_audit_10_pages": {
+    "selection_rule": "First 10 sorted valid pages (P06-P15), pre-selected before inspecting retrieval scores.",
+    "scale": "0 = cut mid-thought/unintelligible, 1 = partially understandable / missing context or tail cut, 2 = self-contained and coherent",
+    "scores": [
+      {"page": 6, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('so')", "note_BC": "Complete Executive Summary opening paragraph"},
+      {"page": 7, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('Res')", "note_BC": "Complete Social Responsibility & Sustainability paragraph"},
+      {"page": 8, "A": 1, "B": 1, "C": 1, "note_A": "Cut mid-word ('org')", "note_BC": "Page starts mid-sentence carried from P07; ends cleanly"},
+      {"page": 9, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('ref')", "note_BC": "Complete Part 1 Framing Risk intro"},
+      {"page": 10, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('diff')", "note_BC": "Complete Fig. 1 caption"},
+      {"page": 11, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('instit')", "note_BC": "Complete Availability of reliable metrics paragraph"},
+      {"page": 12, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('use-')", "note_BC": "Complete 1.2.2 Risk Tolerance paragraph"},
+      {"page": 13, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('unt')", "note_BC": "Complete risk prioritization paragraph"},
+      {"page": 14, "A": 1, "B": 2, "C": 2, "note_A": "Cut mid-word ('or')", "note_BC": "Complete accountability & SME paragraph"},
+      {"page": 15, "A": 1, "B": 1, "C": 1, "note_A": "Cut mid-phrase ('environmental')", "note_BC": "Ends at bullet list continuing onto P16"}
+    ],
+    "averages": {"A": 1.0, "B": 1.8, "C": 1.8}
+  },
+  "metadata_audit_test_top3": {
+    "total_records_per_strategy": 15,
+    "accurate_and_complete": {"A": "15/15", "B": "15/15", "C": "15/15"},
+    "filter_compliance_test": {"A": "N/A", "B": "N/A", "C": "1/1"}
+  },
+  "grounding_audit_5_test_questions": {
+    "scale": "0 = no evidence, 1 = partial / missing condition, 2 = sufficient to answer and trace source",
+    "scores": [
+      {"id": "q16", "A": 2, "B": 2, "C": 2, "note": "All retrieve ISO 26000 social responsibility quote on P07 at Rank 1"},
+      {"id": "q17", "A": 1, "B": 2, "C": 2, "note": "A truncates the accuracy test-set pairing sentence across chunks; B/C keep it intact at Rank 1"},
+      {"id": "q18", "A": 2, "B": 2, "C": 2, "note": "A hits at Rank 1; B/C hit at Rank 2 with full MANAGE 1.4 definition"},
+      {"id": "q19", "A": 2, "B": 2, "C": 2, "note": "All retrieve context-loss explanation on P45 at Rank 1"},
+      {"id": "q20", "A": 2, "B": 2, "C": 2, "note": "All retrieve Appendix D attributes 1 & 2 on P47 at Rank 1"}
+    ],
+    "distribution_and_avg": {
+      "A": {"0": 0, "1": 1, "2": 4, "avg": 1.8},
+      "B": {"0": 0, "1": 0, "2": 5, "avg": 2.0},
+      "C": {"0": 0, "1": 0, "2": 5, "avg": 2.0}
+    }
+  }
+}

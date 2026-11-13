@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,500,50,"document_id,source,page,section,year,document_type,language",none,BAAI/bge-small-en-v1.5 (384d),"Baseline fixed-size chunking may split sentences/definitions mid-way and hurt Hit@1/Hit@3",8/15 (53.3%),9/15 (60.0%),4/5 (80.0%),4/5 (80.0%),"239 chunks; 7.27s ingest; idempotent 239->239"
+B,by_paragraph,800,50 (oversized only),"document_id,source,page,section,year,document_type,language",none,BAAI/bge-small-en-v1.5 (384d),"Paragraph-aware chunking preserves complete ideas and improves Evidence Hit@3 and coherence over A",11/15 (73.3%),12/15 (80.0%),4/5 (80.0%),5/5 (100.0%),"170 chunks; 5.44s ingest; +20pp dev Hit@1 and Hit@3 over A"
+C,by_paragraph,800,50 (oversized only),"document_id,source,page,section,year,document_type,language","section (when provided in query)",BAAI/bge-small-en-v1.5 (384d),"Adding metadata filter on section prevents out-of-section distractors while keeping B's chunks",11/15 (73.3%),12/15 (80.0%),4/5 (80.0%),5/5 (100.0%),"170 chunks; 5.49s ingest; filter compliance 3/3 dev and 1/1 test"
