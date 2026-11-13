@@ -1,6 +1,5 @@
-# Core setup, PDF parsing, local SentenceTransformers embeddings, and Qdrant vector store.
+# Core setup, PDF parsing, and local SentenceTransformers embeddings for PostgreSQL + pgvector.
 psycopg[binary]==3.3.8
 pypdf>=5,<8
 python-dotenv>=1,<2
 sentence-transformers>=3.0.0
-qdrant-client>=1.12.0

@@ -30,11 +30,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Social responsibility can refer to the organization’s responsibility “for the impacts of its decisions and activities on society and the environment through transparent and ethical behavior” ( ISO 26000:2010). Sustainability refers to the “state of the global system, including environmental, social, and economic aspects, in which the needs of the present are met without compromising the ability of future generations to meet their own needs” ( ISO /IEC TR 24368:2022). Res",
         "score": 0.761928,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -45,11 +45,11 @@
         "text": "et their own needs” ( ISO /IEC TR 24368:2022). Responsible AI is meant to result in technology that is also equitable and accountable. The expectation is that organizational practices are carried out in accord with “professional responsibility,” defined by ISO as an approach that “aims to ensure that professionals who design, develop, or deploy AI systems and applications or AI-based products or systems, recognize their unique position to exert influence on people, society, and the future of AI”",
         "score": 0.690285,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -60,11 +60,11 @@
         "text": "or undesirable outcomes for individuals and communities. With proper controls, AI systems can mitigate and manage inequitable outcomes. AI risk management is a key component of responsible development and use of AI systems. Responsible AI practices can help align the decisions about AI system design, development, and uses with intended aim and values. Core concepts in responsible AI emphasize human centricity, social responsibility, and sustainability. AI risk management can drive responsible us",
         "score": 0.618631,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 5
+          "chunk_index": 5,
+          "document_type": "framework"
         }
       }
     ]
@@ -98,11 +98,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Accuracy and robustness contribute to the validity and trustworthiness of AI systems, and can be in tension with one another in AI systems. Accuracy is defined by ISO /IEC TS 5723:2022 as “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” Measures of accuracy should consider computational-centric measures (e.g., false positive and false negative rates), human-AI teaming, and demonstrate external val",
         "score": 0.828147,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -113,11 +113,11 @@
         "text": ", assess, benchmark, and monitor AI risk and related impacts. It uses knowledge relevant to AI risks identified in the MAP function and informs the MANAGE function. AI systems should be tested before their deployment and regularly while in operation. AI risk measurements include documenting aspects of systems’ functionality and trustworthiness. Measuring AI risks includes tracking metrics for trustworthy characteristics, social impact, and human-AI configurations. Processes developed or adopted",
         "score": 0.794273,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -128,11 +128,11 @@
         "text": "that minimize potential harms to people if it is operating in an unexpected setting. Validity and reliability for deployed AI systems are often assessed by ongoing testing or monitoring that confirms a system is performing as intended. Measurement of validity, accuracy, robustness, and reliability contribute to trustworthiness and should take into consideration that certain types of failures can cause greater harm. AI risk management efforts should prioritize the minimization of potential negat",
         "score": 0.787419,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 3
+          "chunk_index": 3,
+          "document_type": "framework"
         }
       }
     ]
@@ -166,11 +166,11 @@
         "text": ". MANAGE 1.4: Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors. MANAGE 2.1: Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or",
         "score": 0.850232,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       },
       {
@@ -181,11 +181,11 @@
         "text": "assessing and prioritizing risk based on context remains important because non-human-facing AI systems can have downstream safety or social implications. Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) – directly impacts end users or affected individuals and communities. Documenting residual risks will call for the system provider to fully consider the risks of deploying the AI product and will inform end users about potential negative impacts of interactin",
         "score": 0.782203,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 3
+          "chunk_index": 3,
+          "document_type": "framework"
         }
       },
       {
@@ -196,11 +196,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 This complexity and varying levels of visibility can introduce uncertainty into risk management practices. Anticipating, assessing, and otherwise addressing potential sources of negative risk can mitigate this uncertainty and enhance the integrity of the decision process. The information gathered while carrying out the MAP function enables negative risk prevention and informs decisions for processes such as model management, as well as an initial decision about appropria",
         "score": 0.72695,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       }
     ]
@@ -234,11 +234,11 @@
         "text": "ata-driven approaches that AI systems rely on attempt to convert or represent individual and social observational and decision-making practices into measurable quantities. Representing complex human phenomena with mathematical models can come at the cost of removing necessary context. This loss of context may in turn make it difficult to understand individual and societal impacts that are key to AI risk management efforts. Issues that merit further consideration and research include: 1. Human ro",
         "score": 0.769552,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -249,11 +249,11 @@
         "text": "risks – and benefits – can emerge from the interplay of technical aspects combined with societal factors related to how a system is used, its interactions with other AI systems, who operates it, and the social context in which it is deployed. These risks make AI a uniquely challenging technology to deploy and utilize both for organizations and within society. Without proper controls, AI systems can amplify, perpetuate, or exacerbate inequitable or undesirable outcomes for individuals and commun",
         "score": 0.743611,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 4
+          "chunk_index": 4,
+          "document_type": "framework"
         }
       },
       {
@@ -264,11 +264,11 @@
         "text": "not well-defined or adequately understood are difficult to measure quantitatively or qualitatively. The inability to appropriately measure AI risks does not imply that an AI system necessarily poses either a high or low risk. Some risk measurement challenges include: Risks related to third-party software, hardware, and data: Third-party data or systems can accelerate research and development and facilitate technology transition. They also may complicate risk measurement. Risk can emerge both fro",
         "score": 0.740105,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       }
     ]
@@ -302,11 +302,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Appendix D: Attributes of the AI RMF NIST described several key attributes of the AI RMF when work on the Framework first began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference. The AI RMF strives to: 1. Be risk-based, resource-efficient, pro-innovation, and voluntary. 2. Be consensus-driven and developed and regularly updated through an open, transparent process. All stakeholders should have th",
         "score": 0.803656,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -317,11 +317,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE . Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes.",
         "score": 0.76012,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -332,11 +332,11 @@
         "text": "the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or applica",
         "score": 0.749094,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 3
+          "chunk_index": 3,
+          "document_type": "framework"
         }
       }
     ]
@@ -372,11 +372,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Social responsibility can refer to the organization’s responsibility “for the impacts of its decisions and activities on society and the environment through transparent and ethical behavior” ( ISO 26000:2010). Sustainability refers to the “state of the global system, including environmental, social, and economic aspects, in which the needs of the present are met without compromising the ability of future generations to meet their own needs” ( ISO /IEC TR 24368:2022). Responsible AI is meant to result in technology that is also equitable and accountable.",
         "score": 0.744539,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -387,11 +387,11 @@
         "text": "The expectation is that organizational practices are carried out in accord with “professional responsibility,” defined by ISO as an approach that “aims to ensure that professionals who design, develop, or deploy AI systems and applications or AI-based products or systems, recognize their unique position to exert influence on people, society, and the future of AI” (ISO /IEC TR 24368:2022).",
         "score": 0.659443,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -402,11 +402,11 @@
         "text": "• designate boundaries for AI operation (technical, societal, legal, and ethical); and • promote discussion of the tradeoffs needed to balance societal values and priorities related to civil liberties and rights, equity, the environment and the planet, and the economy. Successful risk management depends upon a sense of collective responsibility among AI actors shown in Figure 3. The AI RMF functions, described in Section 5, require diverse perspectives, disciplines, professions, and experiences. Diverse teams contribute to more open sharing of ideas and assumptions about the purposes and functions of technology – making these implicit aspects more explicit. This broader collective perspective creates opportunities for surfacing problems and identifying existing and emergent risks. Page 10",
         "score": 0.614051,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       }
     ]
@@ -440,11 +440,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Accuracy and robustness contribute to the validity and trustworthiness of AI systems, and can be in tension with one another in AI systems. Accuracy is defined by ISO /IEC TS 5723:2022 as “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” Measures of accuracy should consider computational-centric measures (e.g., false positive and false negative rates), human-AI teaming, and demonstrate external validity (generalizable beyond the training conditions). Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology; these should be included in associated documentation.",
         "score": 0.852927,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -455,11 +455,11 @@
         "text": "Validity and reliability for deployed AI systems are often assessed by ongoing testing or monitoring that confirms a system is performing as intended. Measurement of validity, accuracy, robustness, and reliability contribute to trustworthiness and should take into consideration that certain types of failures can cause greater harm. AI risk management efforts should prioritize the minimization of potential negative impacts, and may need to include human intervention in cases where the AI system cannot detect or correct errors. 3.2 Safe AI systems should “not under defined conditions, lead to a state in which human life, health, property, or the environment is endangered” (Source: ISO /IEC TS 5723:2022). Safe operation of AI systems is improved through:",
         "score": 0.796831,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       },
       {
@@ -470,11 +470,11 @@
         "text": "3.1 Valid and Reliable Validation is the “confirmation, through the provision of objective evidence, that the requirements for a specific intended use or application have been fulfilled” (Source: ISO 9000:2015). Deployment of AI systems which are inaccurate, unreliable, or poorly generalized to data and settings beyond their training creates and increases negative AI risks and reduces trustworthiness. Reliability is defined in the same standard as the “ability of an item to perform as required, without failure, for a given time interval, under given conditions” (Source: ISO /IEC TS 5723:2022). Reliability is a goal for overall correctness of AI system operation under the conditions of expected use and over a given period of time, including the entire lifetime of the system. Page 13",
         "score": 0.785683,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 4
+          "chunk_index": 4,
+          "document_type": "framework"
         }
       }
     ]
@@ -508,11 +508,11 @@
         "text": "Nonetheless, regularly assessing and prioritizing risk based on context remains important because non-human-facing AI systems can have downstream safety or social implications. Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) – directly impacts end users or affected individuals and communities. Documenting residual risks will call for the system provider to fully consider the risks of deploying the AI product and will inform end users about potential negative impacts of interacting with the system.",
         "score": 0.798218,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       },
       {
@@ -521,13 +521,13 @@
         "source": "starter/data/NIST.AI.100-1.pdf",
         "page": 37,
         "text": "MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting. MANAGE 1.4: Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors. MANAGE 2.1: Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts.",
-        "score": 0.786266,
+        "score": 0.786265,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -538,11 +538,11 @@
         "text": "“Risk management refers to coordinated activities to direct and control an organization with regard to risk” (Source: ISO 31000:2018). While risk management processes generally address negative impacts, this Framework offers approaches to minimize anticipated negative impacts of AI systems and identify opportunities to maximize positive impacts. Effectively managing the risk of potential harms could lead to more trustworthy AI systems and unleash potential benefits to people (individuals, communities, and society), organizations, and systems/ecosystems.",
         "score": 0.73852,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       }
     ]
@@ -576,11 +576,11 @@
         "text": "Many of the data-driven approaches that AI systems rely on attempt to convert or represent individual and social observational and decision-making practices into measurable quantities. Representing complex human phenomena with mathematical models can come at the cost of removing necessary context. This loss of context may in turn make it difficult to understand individual and societal impacts that are key to AI risk management efforts. Issues that merit further consideration and research include:",
         "score": 0.818862,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -591,11 +591,11 @@
         "text": "AI risk management approaches for human-AI configurations will be augmented by ongoing research and evaluation. For example, the degree to which humans are empowered and incentivized to challenge AI system output requires further studies. Data about the frequency and rationale with which humans overrule AI system output in deployed systems may be useful to collect and analyze. Page 41",
         "score": 0.755505,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 3
+          "chunk_index": 3,
+          "document_type": "framework"
         }
       },
       {
@@ -606,11 +606,11 @@
         "text": "While there are myriad standards and best practices to help organizations mitigate the risks of traditional software or information-based systems, the risks posed by AI systems are in many ways unique (See Appendix B). AI systems, for example, may be trained on data that can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts in which they are deployed are frequently complex, making it difficult to detect and respond to failures when they occur. AI systems are inherently socio-technical in nature, meaning they are influenced by societal dynamics and human behavior.",
         "score": 0.751289,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       }
     ]
@@ -644,11 +644,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Appendix D: Attributes of the AI RMF NIST described several key attributes of the AI RMF when work on the Framework first began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference. The AI RMF strives to: 1. Be risk-based, resource-efficient, pro-innovation, and voluntary. 2. Be consensus-driven and developed and regularly updated through an open, transparent process. All stakeholders should have the opportunity to contribute to the AI RMF’s development.",
         "score": 0.809362,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -659,11 +659,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE . Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes.",
         "score": 0.76012,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -674,11 +674,11 @@
         "text": "The AI RMF refers to an AI system as an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
         "score": 0.75496,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       }
     ]
@@ -716,11 +716,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Social responsibility can refer to the organization’s responsibility “for the impacts of its decisions and activities on society and the environment through transparent and ethical behavior” ( ISO 26000:2010). Sustainability refers to the “state of the global system, including environmental, social, and economic aspects, in which the needs of the present are met without compromising the ability of future generations to meet their own needs” ( ISO /IEC TR 24368:2022). Responsible AI is meant to result in technology that is also equitable and accountable.",
         "score": 0.744539,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -731,11 +731,11 @@
         "text": "The expectation is that organizational practices are carried out in accord with “professional responsibility,” defined by ISO as an approach that “aims to ensure that professionals who design, develop, or deploy AI systems and applications or AI-based products or systems, recognize their unique position to exert influence on people, society, and the future of AI” (ISO /IEC TR 24368:2022).",
         "score": 0.659443,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -746,11 +746,11 @@
         "text": "These risks make AI a uniquely challenging technology to deploy and utilize both for organizations and within society. Without proper controls, AI systems can amplify, perpetuate, or exacerbate inequitable or undesirable outcomes for individuals and communities. With proper controls, AI systems can mitigate and manage inequitable outcomes. AI risk management is a key component of responsible development and use of AI systems. Responsible AI practices can help align the decisions about AI system design, development, and uses with intended aim and values. Core concepts in responsible AI emphasize human centricity, social responsibility, and sustainability.",
         "score": 0.583276,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 4
+          "chunk_index": 4,
+          "document_type": "framework"
         }
       }
     ]
@@ -784,11 +784,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Accuracy and robustness contribute to the validity and trustworthiness of AI systems, and can be in tension with one another in AI systems. Accuracy is defined by ISO /IEC TS 5723:2022 as “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” Measures of accuracy should consider computational-centric measures (e.g., false positive and false negative rates), human-AI teaming, and demonstrate external validity (generalizable beyond the training conditions). Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology; these should be included in associated documentation.",
         "score": 0.852927,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -799,11 +799,11 @@
         "text": "Validity and reliability for deployed AI systems are often assessed by ongoing testing or monitoring that confirms a system is performing as intended. Measurement of validity, accuracy, robustness, and reliability contribute to trustworthiness and should take into consideration that certain types of failures can cause greater harm. AI risk management efforts should prioritize the minimization of potential negative impacts, and may need to include human intervention in cases where the AI system cannot detect or correct errors. 3.2 Safe AI systems should “not under defined conditions, lead to a state in which human life, health, property, or the environment is endangered” (Source: ISO /IEC TS 5723:2022). Safe operation of AI systems is improved through:",
         "score": 0.796831,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       },
       {
@@ -814,11 +814,11 @@
         "text": "3.1 Valid and Reliable Validation is the “confirmation, through the provision of objective evidence, that the requirements for a specific intended use or application have been fulfilled” (Source: ISO 9000:2015). Deployment of AI systems which are inaccurate, unreliable, or poorly generalized to data and settings beyond their training creates and increases negative AI risks and reduces trustworthiness. Reliability is defined in the same standard as the “ability of an item to perform as required, without failure, for a given time interval, under given conditions” (Source: ISO /IEC TS 5723:2022). Reliability is a goal for overall correctness of AI system operation under the conditions of expected use and over a given period of time, including the entire lifetime of the system. Page 13",
         "score": 0.785683,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 4
+          "chunk_index": 4,
+          "document_type": "framework"
         }
       }
     ]
@@ -852,11 +852,11 @@
         "text": "Nonetheless, regularly assessing and prioritizing risk based on context remains important because non-human-facing AI systems can have downstream safety or social implications. Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) – directly impacts end users or affected individuals and communities. Documenting residual risks will call for the system provider to fully consider the risks of deploying the AI product and will inform end users about potential negative impacts of interacting with the system.",
         "score": 0.798218,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       },
       {
@@ -865,13 +865,13 @@
         "source": "starter/data/NIST.AI.100-1.pdf",
         "page": 37,
         "text": "MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting. MANAGE 1.4: Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors. MANAGE 2.1: Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts.",
-        "score": 0.786266,
+        "score": 0.786265,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -882,11 +882,11 @@
         "text": "“Risk management refers to coordinated activities to direct and control an organization with regard to risk” (Source: ISO 31000:2018). While risk management processes generally address negative impacts, this Framework offers approaches to minimize anticipated negative impacts of AI systems and identify opportunities to maximize positive impacts. Effectively managing the risk of potential harms could lead to more trustworthy AI systems and unleash potential benefits to people (individuals, communities, and society), organizations, and systems/ecosystems.",
         "score": 0.73852,
         "metadata": {
-          "section": "part1_foundational",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part1_foundational",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       }
     ]
@@ -920,11 +920,11 @@
         "text": "Many of the data-driven approaches that AI systems rely on attempt to convert or represent individual and social observational and decision-making practices into measurable quantities. Representing complex human phenomena with mathematical models can come at the cost of removing necessary context. This loss of context may in turn make it difficult to understand individual and societal impacts that are key to AI risk management efforts. Issues that merit further consideration and research include:",
         "score": 0.818862,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       },
       {
@@ -935,11 +935,11 @@
         "text": "AI risk management approaches for human-AI configurations will be augmented by ongoing research and evaluation. For example, the degree to which humans are empowered and incentivized to challenge AI system output requires further studies. Data about the frequency and rationale with which humans overrule AI system output in deployed systems may be useful to collect and analyze. Page 41",
         "score": 0.755505,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 3
+          "chunk_index": 3,
+          "document_type": "framework"
         }
       },
       {
@@ -950,11 +950,11 @@
         "text": "While there are myriad standards and best practices to help organizations mitigate the risks of traditional software or information-based systems, the risks posed by AI systems are in many ways unique (See Appendix B). AI systems, for example, may be trained on data that can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts in which they are deployed are frequently complex, making it difficult to detect and respond to failures when they occur. AI systems are inherently socio-technical in nature, meaning they are influenced by societal dynamics and human behavior.",
         "score": 0.751289,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 2
+          "chunk_index": 2,
+          "document_type": "framework"
         }
       }
     ]
@@ -988,11 +988,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Appendix D: Attributes of the AI RMF NIST described several key attributes of the AI RMF when work on the Framework first began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference. The AI RMF strives to: 1. Be risk-based, resource-efficient, pro-innovation, and voluntary. 2. Be consensus-driven and developed and regularly updated through an open, transparent process. All stakeholders should have the opportunity to contribute to the AI RMF’s development.",
         "score": 0.809362,
         "metadata": {
-          "section": "appendix",
           "year": 2023,
-          "document_type": "framework",
+          "section": "appendix",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -1003,11 +1003,11 @@
         "text": "NIST AI 100-1 AI RMF 1.0 Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE . Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes.",
         "score": 0.76012,
         "metadata": {
-          "section": "part2_core_profiles",
           "year": 2023,
-          "document_type": "framework",
+          "section": "part2_core_profiles",
           "language": "en",
-          "chunk_index": 0
+          "chunk_index": 0,
+          "document_type": "framework"
         }
       },
       {
@@ -1018,11 +1018,11 @@
         "text": "The AI RMF refers to an AI system as an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
         "score": 0.75496,
         "metadata": {
-          "section": "executive_summary",
           "year": 2023,
-          "document_type": "framework",
+          "section": "executive_summary",
           "language": "en",
-          "chunk_index": 1
+          "chunk_index": 1,
+          "document_type": "framework"
         }
       }
     ]
