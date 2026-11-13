@@ -5,4 +5,4 @@
 - Lớp: L3A
 - Chủ đề và corpus: NIST AI 100-1 — Artificial Intelligence Risk Management Framework (AI RMF 1.0)
 - Repo bài nộp: K5-L3A-DAY06-NguyenVanNhi-2A202603697-DataIngestion
-- Commit chốt bài: (sẽ cập nhật ở commit cuối cùng)
+- Commit chốt bài: d348a38 (report & pipeline)
