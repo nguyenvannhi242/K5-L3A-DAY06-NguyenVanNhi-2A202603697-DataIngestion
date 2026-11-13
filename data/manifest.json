@@ -1,0 +1,242 @@
+{
+  "corpus_name": "NIST AI RMF 1.0",
+  "documents": [
+    {
+      "source_id": "nist-ai-100-1",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "source_path": "starter/data/NIST.AI.100-1.pdf",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "doi": "https://doi.org/10.6028/NIST.AI.100-1",
+      "version": "1.0 (January 2023)",
+      "year": 2023,
+      "language": "en",
+      "license_or_permission": "Public Domain (U.S. Government Work, NIST)",
+      "accessed_at": "2026-11-13T12:08:23+07:00",
+      "physical_pages": 48,
+      "excluded_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        48
+      ],
+      "excluded_reason": "P01-P02 cover/title, P03 disclaimer/acknowledgments, P04 table of contents, P05 list of figures, P48 back cover DOI.",
+      "valid_content_pages_count": 42,
+      "page_counting_rule": "Count only physical PDF pages 6-47 containing substantive framework, core, profile, or appendix text.",
+      "total_normalized_chars": 101495,
+      "pages": [
+        {
+          "page": 6,
+          "section": "executive_summary",
+          "char_count": 3108
+        },
+        {
+          "page": 7,
+          "section": "executive_summary",
+          "char_count": 3103
+        },
+        {
+          "page": 8,
+          "section": "executive_summary",
+          "char_count": 1874
+        },
+        {
+          "page": 9,
+          "section": "part1_foundational",
+          "char_count": 2750
+        },
+        {
+          "page": 10,
+          "section": "part1_foundational",
+          "char_count": 1887
+        },
+        {
+          "page": 11,
+          "section": "part1_foundational",
+          "char_count": 2770
+        },
+        {
+          "page": 12,
+          "section": "part1_foundational",
+          "char_count": 2964
+        },
+        {
+          "page": 13,
+          "section": "part1_foundational",
+          "char_count": 3131
+        },
+        {
+          "page": 14,
+          "section": "part1_foundational",
+          "char_count": 3058
+        },
+        {
+          "page": 15,
+          "section": "part1_foundational",
+          "char_count": 1583
+        },
+        {
+          "page": 16,
+          "section": "part1_foundational",
+          "char_count": 409
+        },
+        {
+          "page": 17,
+          "section": "part1_foundational",
+          "char_count": 2648
+        },
+        {
+          "page": 18,
+          "section": "part1_foundational",
+          "char_count": 2992
+        },
+        {
+          "page": 19,
+          "section": "part1_foundational",
+          "char_count": 2784
+        },
+        {
+          "page": 20,
+          "section": "part1_foundational",
+          "char_count": 3129
+        },
+        {
+          "page": 21,
+          "section": "part1_foundational",
+          "char_count": 2928
+        },
+        {
+          "page": 22,
+          "section": "part1_foundational",
+          "char_count": 2829
+        },
+        {
+          "page": 23,
+          "section": "part1_foundational",
+          "char_count": 1678
+        },
+        {
+          "page": 24,
+          "section": "part1_foundational",
+          "char_count": 1890
+        },
+        {
+          "page": 25,
+          "section": "part2_core_profiles",
+          "char_count": 1289
+        },
+        {
+          "page": 26,
+          "section": "part2_core_profiles",
+          "char_count": 2696
+        },
+        {
+          "page": 27,
+          "section": "part2_core_profiles",
+          "char_count": 2439
+        },
+        {
+          "page": 28,
+          "section": "part2_core_profiles",
+          "char_count": 2309
+        },
+        {
+          "page": 29,
+          "section": "part2_core_profiles",
+          "char_count": 2470
+        },
+        {
+          "page": 30,
+          "section": "part2_core_profiles",
+          "char_count": 2765
+        },
+        {
+          "page": 31,
+          "section": "part2_core_profiles",
+          "char_count": 2094
+        },
+        {
+          "page": 32,
+          "section": "part2_core_profiles",
+          "char_count": 2334
+        },
+        {
+          "page": 33,
+          "section": "part2_core_profiles",
+          "char_count": 2747
+        },
+        {
+          "page": 34,
+          "section": "part2_core_profiles",
+          "char_count": 2103
+        },
+        {
+          "page": 35,
+          "section": "part2_core_profiles",
+          "char_count": 2063
+        },
+        {
+          "page": 36,
+          "section": "part2_core_profiles",
+          "char_count": 2393
+        },
+        {
+          "page": 37,
+          "section": "part2_core_profiles",
+          "char_count": 2265
+        },
+        {
+          "page": 38,
+          "section": "part2_core_profiles",
+          "char_count": 2662
+        },
+        {
+          "page": 39,
+          "section": "part2_core_profiles",
+          "char_count": 468
+        },
+        {
+          "page": 40,
+          "section": "appendix",
+          "char_count": 3127
+        },
+        {
+          "page": 41,
+          "section": "appendix",
+          "char_count": 3026
+        },
+        {
+          "page": 42,
+          "section": "appendix",
+          "char_count": 2062
+        },
+        {
+          "page": 43,
+          "section": "appendix",
+          "char_count": 2705
+        },
+        {
+          "page": 44,
+          "section": "appendix",
+          "char_count": 2644
+        },
+        {
+          "page": 45,
+          "section": "appendix",
+          "char_count": 2703
+        },
+        {
+          "page": 46,
+          "section": "appendix",
+          "char_count": 2163
+        },
+        {
+          "page": 47,
+          "section": "appendix",
+          "char_count": 2453
+        }
+      ]
+    }
+  ]
+}
