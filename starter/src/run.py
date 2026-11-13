@@ -14,7 +14,7 @@ from .embeddings import MyEmbedder
 from .evaluation import evaluate_query, summarize
 from .ingestion import load_pdf
 from .models import Chunk
-from .store import QdrantVectorStore
+from .store import PgVectorStore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 STARTER_DIR = Path(__file__).resolve().parents[1]
@@ -36,6 +36,9 @@ def _chunk_stats(chunks: list[Chunk]) -> dict[str, Any]:
 def main() -> None:
     load_dotenv(STARTER_DIR / ".env")
     model_name = os.getenv("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5").strip() or "BAAI/bge-small-en-v1.5"
+    database_url = os.getenv("DATABASE_URL", "").strip()
+    if not database_url:
+        raise RuntimeError("DATABASE_URL missing in starter/.env. Copy .env.example and start Docker pgvector.")
 
     pdf_path = STARTER_DIR / "data" / "NIST.AI.100-1.pdf"
     benchmark_path = REPO_ROOT / "benchmark" / "questions.json"
@@ -75,9 +78,10 @@ def main() -> None:
         for c in chunks_b
     ]
 
-    # 4. Initialize real embedding model and persistent Qdrant store
+    # 4. Initialize real embedding model and PostgreSQL + pgvector store
     embedder = MyEmbedder(model_name=model_name)
-    store = QdrantVectorStore(storage_path=STARTER_DIR / "results" / "qdrant_db", dimensions=embedder.dimensions)
+    store = PgVectorStore(database_url=database_url, dimensions=embedder.dimensions)
+    store.create_schema()
 
     strategy_chunks = {"A": chunks_a, "B": chunks_b, "C": chunks_c}
     ingest_metrics: dict[str, Any] = {}
@@ -175,7 +179,7 @@ def main() -> None:
         "student": "Nguyễn Văn Nhi (2A202603697 - L3A)",
         "embedding_model": embedder.model_name,
         "embedding_dimensions": embedder.dimensions,
-        "vector_store": "qdrant-client 1.20.0 (local persistent, cosine, exact)",
+        "vector_store": "PostgreSQL 16 + pgvector 0.8.7 (Docker local, cosine <=>, exact)",
         "cost_usd": 0.0,
         "valid_pages_count": len(pages),
         "skipped_or_logged_pages": ingestion_log,
