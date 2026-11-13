@@ -25,13 +25,15 @@
 
 ### Embedding Model, Vector Store, Metric, Lệnh chạy và Chi phí
 - **Embedding model:** `BAAI/bge-small-en-v1.5` (chạy local qua `sentence-transformers 6.3.0`, **384 chiều**, `normalize_embeddings=True`). Với query, áp dụng prefix chuẩn của BGE: `"Represent this sentence for searching relevant passages: "`; document giữ nguyên text.
-- **Vector store:** `qdrant-client 1.20.0` (chế độ local persistent lưu tại `starter/results/qdrant_db/`, metric **Cosine**, exact search). *(Ghi chú: Docker Desktop trên máy không khởi động được engine Linux nên sử dụng Qdrant local persistent theo đúng tùy chọn thay thế hợp lệ trong `GUIDE.md` và `starter/README.md`.)*
-- **Idempotency (nạp lại không trùng):** Dùng UUIDv5 tất định từ `chunk_id` và xóa chunk cũ theo `document_id` trước khi upsert. Kiểm chứng nạp lại Chiến lược A: số bản ghi giữ nguyên **239 → 239** (`no_duplicates: true`).
+- **Vector store:** **PostgreSQL 16.16 + pgvector 0.8.7** chạy trên Docker (`pgvector/pgvector:0.8.7-pg16`, cổng `127.0.0.1:55433`, kết nối qua `psycopg 3.3.8`), metric **Cosine distance (`<=>`)**, exact search.
+- **Idempotency (nạp lại không trùng):** Khóa chính `(strategy, chunk_id)` kết hợp `ON CONFLICT DO UPDATE` và xóa chunk cũ theo `(strategy, document_id)` trước khi upsert. Kiểm chứng nạp lại Chiến lược A: số bản ghi giữ nguyên **239 → 239** (`no_duplicates: true`).
 - **Lệnh chạy:**
   ```bash
   cd starter
+  Copy-Item .env.example .env
   python -m pip install -r requirements.txt
-  python -m pip install sentence-transformers qdrant-client
+  docker compose -p day6_student_starter up -d --wait
+  python scripts/check_setup.py
   python -m src.run
   ```
 - **Chi phí:** **$0.00** (chạy 100% local).
@@ -68,12 +70,12 @@
 ### Bảng 1: Hiệu năng truy xuất và tài nguyên
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian ingest | Chi phí |
 |---|---|---:|---:|---:|---:|---:|
-| **A** | `dev` | 8/15 (53.3%) | 9/15 (60.0%) | 239 | 7.27s (embed 6.49s + upsert 0.78s) | \$0.00 |
-| **A** | `test` | 4/5 (80.0%) | 4/5 (80.0%) | 239 | 7.27s | \$0.00 |
-| **B** | `dev` | **11/15 (73.3%)** | **12/15 (80.0%)** | **170** | **5.44s** (embed 4.92s + upsert 0.52s) | \$0.00 |
-| **B** | `test` | 4/5 (80.0%) | **5/5 (100.0%)** | **170** | **5.44s** | \$0.00 |
-| **C** | `dev` | **11/15 (73.3%)** | **12/15 (80.0%)** | 170 | 5.49s (embed 4.92s + upsert 0.57s) | \$0.00 |
-| **C** | `test` | 4/5 (80.0%) | **5/5 (100.0%)** | 170 | 5.49s | \$0.00 |
+| **A** | `dev` | 8/15 (53.3%) | 9/15 (60.0%) | 239 | 8.13s (embed 7.76s + upsert 0.37s) | \$0.00 |
+| **A** | `test` | 4/5 (80.0%) | 4/5 (80.0%) | 239 | 8.13s | \$0.00 |
+| **B** | `dev` | **11/15 (73.3%)** | **12/15 (80.0%)** | **170** | **6.89s** (embed 6.59s + upsert 0.31s) | \$0.00 |
+| **B** | `test` | 4/5 (80.0%) | **5/5 (100.0%)** | **170** | **6.89s** | \$0.00 |
+| **C** | `dev` | **11/15 (73.3%)** | **12/15 (80.0%)** | 170 | 6.87s (embed 6.59s + upsert 0.28s) | \$0.00 |
+| **C** | `test` | 4/5 (80.0%) | **5/5 (100.0%)** | 170 | 6.87s | \$0.00 |
 
 ### Bảng 2: Đánh giá thủ công Coherence, Metadata và Grounding
 | Strategy | Coherence TB /2 (n=10) | Metadata đủ & đúng (n/N) | Filter tuân thủ (n/N hoặc N/A) | Grounding 0/1/2 (số câu) & TB /2 (n=5 test) |
@@ -96,7 +98,7 @@
 - Chuyển từ fixed-size 500 ký tự (A) sang paragraph-aware tối đa 800 ký tự (B) giúp:
   - **Tăng mạnh độ chính xác truy xuất:** `dev` Hit@1 tăng từ **8/15 (53.3%) → 11/15 (73.3%)** (+20 điểm %), `dev` Hit@3 tăng **9/15 (60.0%) → 12/15 (80.0%)**, và `test` Hit@3 đạt **5/5 (100%)** so với **4/5 (80%)** của A.
   - **Cải thiện độ mạch lạc (Coherence):** tăng từ **1.00/2 → 1.80/2**, vì A liên tục cắt ngang giữa từ/câu ở mốc 500 ký tự (`"communities, so"`, `"are diff"`, `"use-"`), trong khi B giữ trọn vẹn đoạn văn.
-  - **Giảm tài nguyên:** số chunk giảm **28.9%** (239 → 170), thời gian ingest giảm từ **7.27s → 5.44s**.
+  - **Giảm tài nguyên:** số chunk giảm **28.9%** (239 → 170), thời gian ingest giảm từ **8.13s → 6.89s**.
 
 ### So sánh B–C (Tác động của Metadata Filter)
 - Trên 4 câu có filter (`q09`, `q12`, `q15`, `q16`), chiến lược C đạt **tuân thủ filter 100%** (3/3 dev, 1/1 test) và giữ nguyên Hit@1/Hit@3 bằng B (12/15 dev, 5/5 test).
@@ -120,7 +122,7 @@
 
 ### Giới hạn và Hướng cải tiến
 - **Giới hạn:** Tập test chỉ có 5 câu (chỉ mang tính minh họa, không thể suy rộng tổng quát cho mọi corpus); tác giả tự chấm Coherence/Grounding nên có thể tồn tại thiên lệch; chunking vẫn thực hiện theo từng trang PDF nên câu vắt qua ranh giới hai trang (như `P07 → P08`) bị mất ngữ cảnh đầu câu.
-- **Công cụ hỗ trợ & Cách kiểm tra (theo `RULES.md`):** Sử dụng trợ lý AI (Antigravity) để hỗ trợ viết khung mã nguồn pipeline và định dạng bảng báo cáo. Toàn bộ dữ liệu, câu hỏi và kết quả được kiểm chứng thực tế bằng cách: (1) chạy script đối chiếu 20/20 `evidence_quote` khớp nguyên văn trên từng trang `gold_page` của file PDF gốc sau chuẩn hóa; (2) chạy trực tiếp `python -m src.run` với model thật `BAAI/bge-small-en-v1.5` và `QdrantVectorStore`; (3) kiểm tra thủ công từng bản ghi top-3 của tập `test` và 10 mẫu Coherence.
+- **Công cụ hỗ trợ & Cách kiểm tra (theo `RULES.md`):** Sử dụng trợ lý AI (Antigravity) để hỗ trợ viết khung mã nguồn pipeline và định dạng bảng báo cáo. Toàn bộ dữ liệu, câu hỏi và kết quả được kiểm chứng thực tế bằng cách: (1) chạy script đối chiếu 20/20 `evidence_quote` khớp nguyên văn trên từng trang `gold_page` của file PDF gốc sau chuẩn hóa; (2) chạy trực tiếp `python -m src.run` với model thật `BAAI/bge-small-en-v1.5` và `PostgreSQL 16 + pgvector 0.8.7`; (3) kiểm tra thủ công từng bản ghi top-3 của tập `test` và 10 mẫu Coherence.
 - **Cải tiến nếu làm lại:**
   1. Nối text liên trang trước khi chia chunk (nhưng vẫn lưu danh sách `pages` trong metadata để truy vết), giúp khắc phục lỗi câu bị ngắt ở cuối trang PDF.
   2. Gộp các danh sách bullet ngắn với câu dẫn phía trước thay vì tách rời tại `q09`.
